@@ -10,8 +10,8 @@ const handleNav = () => {
 
 allNavItems.forEach((item) => {
 	item.addEventListener('click', () => {
-		// navMobile.classList.toggle('nav-mobile--active');
 		navBtn.classList.toggle('is-active');
+		navMobile.classList.toggle('nav-mobile--active');
 	});
 });
 
