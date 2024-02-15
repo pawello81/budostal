@@ -137,7 +137,7 @@ h1.company-name {
   transition: color 0.4s;
 }
 .nav__link:hover {
-  color: #3f3f3f;
+  color: #13133e;
 }
 
 .realizations {
@@ -332,21 +332,25 @@ h1.company-name {
     grid-column: 2/3;
     background-image: url(../img/img_main_big.jpg);
     height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .nav {
     grid-column: 1/2;
     grid-row: 1/2;
-    padding: 1em;
+    padding: 0.7em;
   }
   .nav-desktop {
     display: block;
+    text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   .nav-mobile {
     display: none;
   }
   .nav__link {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    padding: 0.2em;
     transition: color 0.8s;
   }
   .nav__link::before {
@@ -356,11 +360,17 @@ h1.company-name {
     content: "";
     width: 100%;
     height: 100%;
-    border: 1px solid black;
-    opacity: 1;
+    opacity: 0;
+    transition: 0.8s;
   }
   .nav__link:hover::before {
     display: block;
+    border-bottom: 1px solid #13133e;
+    border-top: 1px solid #13133e;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: 0.8s;
+    text-align: center;
   }
   .hamburger {
     display: none;

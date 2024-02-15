@@ -19,16 +19,18 @@
 			grid-column: 2/3;
 			background-image: url(../img/img_main_big.jpg);
 			height: 100%;
-			// object-fit: cover;
+			object-fit: cover;
 		}
 	}
 	.nav {
 		grid-column: 1/2;
 		grid-row: 1/2;
-		padding: 1em;
+
+		padding: 0.7em;
 
 		&-desktop {
 			display: block;
+			text-align: center;
 			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		}
 
@@ -37,8 +39,8 @@
 		}
 
 		&__link {
-			font-size: 2rem;
-			// padding: 0.8em;
+			font-size: 1.7rem;
+			padding: 0.2em;
 			transition: color 0.8s;
 
 			&::before {
@@ -48,14 +50,18 @@
 				content: '';
 				width: 100%;
 				height: 100%;
-				border: 1px solid black;
-				opacity: 1;
-				// transition: 0.8s;
+				opacity: 0;
+				transition: 0.8s;
 			}
 
 			&:hover::before {
 				display: block;
-				// transition: 0.8s;
+				border-bottom: 1px solid $companyFont;
+				border-top: 1px solid $companyFont;
+				transform: scale(1.1);
+				opacity: 1;
+				transition: 0.8s;
+				text-align: center;
 			}
 		}
 	}

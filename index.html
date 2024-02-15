@@ -13,10 +13,18 @@
 		<link rel="stylesheet" href="./css/hamburger.css" />
 
 		<link rel="stylesheet" href="./css/main.css" />
+
+		<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf0UnIpAAAAAFNg_KyZnn6Jx_nl8y3EN8Y0faJL"></script>
 	</head>
 	<script
 		src="https://kit.fontawesome.com/aaa16471bc.js"
 		crossorigin="anonymous"></script>
+
+	<script>
+		function onSubmit(token) {
+			document.getElementById('demo-form').submit();
+		}
+	</script>
 
 	<body>
 		<header class="header">
@@ -30,11 +38,13 @@
 				<a class="nav__link" href="#offerts">oferta</a>
 				<a class="nav__link" href="#contact">kontakt</a>
 				<a class="nav__link" href="#realizations">realizacje</a>
+				<a class="nav__link" href="#forms">formularz</a>
 			</nav>
 			<nav class="nav nav-desktop">
 				<a class="nav__link nav__border" href="#offerts">oferta</a>
 				<a class="nav__link nav__border" href="#contact">kontakt</a>
 				<a class="nav__link nav__border" href="#realizations">realizacje</a>
+				<a class="nav__link nav__border" href="#forms">formularz</a>
 			</nav>
 
 			<div class="header__text">
@@ -216,7 +226,7 @@
 				</div>
 			</section>
 
-			<section class="message" id="message">
+			<section class="message" id="forms">
 				<div class="wrapper">
 					<h2 class="section-title">formularz<span> kontaktowy</span></h2>
 
@@ -236,6 +246,13 @@
 						</div>
 
 						<button type="submit" class="message__form-btn">Send</button>
+						<button
+							class="g-recaptcha"
+							data-sitekey="6Lf0UnIpAAAAAFNg_KyZnn6Jx_nl8y3EN8Y0faJL"
+							data-callback="onSubmit"
+							data-action="submit">
+							Submit
+						</button>
 					</form>
 				</div>
 			</section>
